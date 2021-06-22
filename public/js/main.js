@@ -573,6 +573,12 @@ function logoutListener(){
 	});
 }
 
+function cartListener(){
+	$("#cart").click(() =>{
+		window.location.href = "/Admin.php";
+	})
+}
+
 	// Document on load.
 	$(function(){
 
@@ -601,7 +607,7 @@ function logoutListener(){
 		footerAnimate();
 
 		logoutListener();
-
+		cartListener();
 	});
 
 

@@ -4,6 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 
+
 dotenv.config({ path: "./.env"})
 
 const app = express(); //For starting server 
@@ -38,7 +39,7 @@ app.use(cookieParser());
 //Define Routes
 app.use("/", require("./routes/pages"));
 app.use("/auth", require("./routes/auth"));
-
+app.use("/Admin.php", require("./routes/pages"))
 
 app.listen(5000, () =>{
     console.log("Server started on Port 5000.")
